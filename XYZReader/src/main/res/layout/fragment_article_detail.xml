@@ -4,36 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     >
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="192dp"
-        android:background="?colorPrimary">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        >
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-            app:expandedTitleMarginStart="72dp"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:collapsedTitleTextAppearance="@style/Theme.Bacon.title"
+            app:expandedTitleTextAppearance="@style/Theme.Bacon.title"
+            app:contentScrim="@color/theme_primary_dark"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:elevation="4dp"
+            >
 
             <!--suppress AndroidLintContentDescription -->
-            <ImageView
-                android:id="@+id/photo"
-                android:scaleType="centerCrop"
-                android:layout_height="wrap_content"
+            <FrameLayout
                 android:layout_width="match_parent"
-                />
+                android:layout_height="wrap_content"
+                app:elevation="4dp"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/scrim"
+                    />
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/text_detail_margin"
+                    android:layout_marginRight="@dimen/text_detail_margin"
+                    />
+
+            </FrameLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/app_bar"
                 android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_height="@dimen/toolbar_size"
+                android:theme="@style/Theme.Bacon.title"
+                app:elevation="4dp"
                 >
 
             </android.support.v7.widget.Toolbar>
@@ -45,13 +65,39 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/article_body"
-            tools:text="TEXT EXAMPLE JJJJJJJJJJJJJJJJJJJJJJJJJJJJjj jjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjj"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorLink="@color/theme_accent"
-            />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/text_detail_margin"
+            android:layout_marginLeft="@dimen/text_detail_margin"
+            android:layout_marginRight="@dimen/text_detail_margin"
+            android:layout_marginTop="@dimen/text_detail_margin"
+            android:background="@color/theme_primary_light"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            >
+
+            <TextView
+                android:id="@+id/article_byline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.Bacon.subTitle"
+                />
+
+            <TextView
+                android:id="@+id/article_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_detail_margin"
+                android:layout_marginLeft="@dimen/text_detail_margin"
+                android:layout_marginRight="@dimen/text_detail_margin"
+                android:layout_marginTop="@dimen/text_detail_margin"
+                android:background="@color/theme_primary_light"
+                android:textColorLink="@color/theme_accent"
+                tools:text="TEXT EXAMPLE JJJJJJJJJJJJJJJJJJJJJJJJJJJJjj jjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjj" />
+
+        </LinearLayout>
+
 
     </android.support.v4.widget.NestedScrollView>
 

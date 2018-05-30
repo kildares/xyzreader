@@ -11,5 +11,9 @@
     <dimen name="card_margin">8dp</dimen>
 
     <dimen name="text_detail_margin">8dp</dimen>
+    <dimen name="text_title_size">20sp</dimen>
+    <dimen name="text_subTitle_size">16sp</dimen>
+
+    <dimen name="toolbar_size">70dp</dimen>
 
 </resources>
