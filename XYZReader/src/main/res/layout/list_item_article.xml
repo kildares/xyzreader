@@ -30,31 +30,24 @@
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            style="@style/Theme.Bacon.CardText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/theme_primary_light"
-            android:ellipsize="end"
-            android:maxLines="4"
             android:paddingBottom="4dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingTop="16dp"
-            android:textColor="@color/theme_text_color_primary"
-            android:fontFamily="sans-serif"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="@style/Theme.Bacon"
+            style="@style/Theme.Bacon.CardText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
             android:textColor="@color/theme_text_color_secondary"
-            android:maxLines="2"
-            android:ellipsize="end"
             android:background="@color/theme_primary_light"
             />
     </LinearLayout>

@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
@@ -141,6 +142,7 @@ public class ArticleDetailFragment extends Fragment implements
         });
 
         collapsingToolbar.setExpandedTitleColor(getActivity().getColor(R.color.theme_text_color_primary));
+        collapsingToolbar.setExpandedTitleTypeface(Typeface.SANS_SERIF);
         collapsingToolbar.setCollapsedTitleTextColor(getActivity().getColor(R.color.theme_text_color_primary));
 
         if (mCursor != null) {
@@ -151,7 +153,7 @@ public class ArticleDetailFragment extends Fragment implements
             collapsingToolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
             Date publishedDate = parsePublishedDate();
 
-            String byTag = "by <font color='#" + getActivity().getString(R.color.theme_primary_dark).substring(3) +"'>";
+            String byTag = " by <font color='#" + getActivity().getString(R.color.theme_primary_dark).substring(3) +"'>";
 
             if (!publishedDate.before(START_OF_EPOCH.getTime())) {
                 bylineView.setText(Html.fromHtml(

@@ -96,7 +96,9 @@
                 android:layout_marginTop="@dimen/text_detail_margin"
                 android:background="@color/theme_primary_light"
                 android:textColorLink="@color/theme_accent"
-            />
+                android:textColor="@color/theme_text_color_primary"
+                style="@style/Theme.Bacon.subTitle"
+                />
 
         </LinearLayout>
 
