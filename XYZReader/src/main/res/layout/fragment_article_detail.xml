@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     >
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
         >
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -28,22 +26,21 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:elevation="4dp"
                 >
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/scrim"
-                    />
 
                 <ImageView
                     android:id="@+id/photo"
                     android:scaleType="centerCrop"
-                    android:layout_height="match_parent"
+                    android:layout_height="360dp"
                     android:layout_width="match_parent"
+                    android:fitsSystemWindows="true"
                     android:layout_marginLeft="@dimen/text_detail_margin"
                     android:layout_marginRight="@dimen/text_detail_margin"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/scrim"
                     />
 
             </FrameLayout>
@@ -54,6 +51,7 @@
                 android:layout_height="@dimen/toolbar_size"
                 android:theme="@style/Theme.Bacon.title"
                 app:elevation="4dp"
+                app:layout_collapseMode="pin"
                 >
 
             </android.support.v7.widget.Toolbar>
@@ -81,6 +79,10 @@
                 android:id="@+id/article_byline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_detail_margin"
+                android:layout_marginLeft="@dimen/text_detail_margin"
+                android:layout_marginRight="@dimen/text_detail_margin"
+                android:layout_marginTop="@dimen/text_detail_margin"
                 style="@style/Theme.Bacon.subTitle"
                 />
 
@@ -94,7 +96,7 @@
                 android:layout_marginTop="@dimen/text_detail_margin"
                 android:background="@color/theme_primary_light"
                 android:textColorLink="@color/theme_accent"
-                tools:text="TEXT EXAMPLE JJJJJJJJJJJJJJJJJJJJJJJJJJJJjj jjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjj" />
+            />
 
         </LinearLayout>
 

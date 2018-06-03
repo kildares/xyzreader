@@ -30,6 +30,9 @@
         <item name="android:background">@color/theme_primary_dark</item>
         <item name="android:textSize">@dimen/text_title_size</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name = "Theme.Bacon.subTitle" parent = "Theme.Bacon">

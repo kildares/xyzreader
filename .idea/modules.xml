@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XYZReader/XYZReader.iml" filepath="$PROJECT_DIR$/XYZReader/XYZReader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidPrj.iml" filepath="$PROJECT_DIR$/androidPrj.iml" />
+      <module fileurl="file://E:\Cursos\Udacity\Codes\xyz_reader_starter_code\androidPrj.iml" filepath="E:\Cursos\Udacity\Codes\xyz_reader_starter_code\androidPrj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xyz_reader_starter_code.iml" filepath="$PROJECT_DIR$/xyz_reader_starter_code.iml" />
     </modules>
   </component>
 </project>

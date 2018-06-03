@@ -28,5 +28,5 @@
 
     <color name="scrim_start">#00000000</color>
     <color name="scrim_center">#00000000</color>
-    <color name="scrim_end">#4D000000</color>
+    <color name="scrim_end">#fd5621</color>
 </resources>

@@ -15,6 +15,7 @@ import java.util.GregorianCalendar;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 
 import android.text.format.DateUtils;
@@ -129,17 +130,25 @@ public class ArticleDetailFragment extends Fragment implements
 
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
-        CollapsingToolbarLayout toolbar = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar_layout);
+        CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar_layout);
+        Toolbar toolbar = (Toolbar)mRootView.findViewById(R.id.app_bar);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
-        toolbar.setExpandedTitleColor(getActivity().getColor(R.color.theme_primary_light));
-        toolbar.setCollapsedTitleTextColor(getActivity().getColor(R.color.theme_text_color_primary));
+        collapsingToolbar.setExpandedTitleColor(getActivity().getColor(R.color.theme_text_color_primary));
+        collapsingToolbar.setCollapsedTitleTextColor(getActivity().getColor(R.color.theme_text_color_primary));
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
             mRootView.setVisibility(View.VISIBLE);
             mRootView.animate().alpha(1);
 
-            toolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
+            collapsingToolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
             Date publishedDate = parsePublishedDate();
 
             String byTag = "by <font color='#" + getActivity().getString(R.color.theme_primary_dark).substring(3) +"'>";
@@ -181,7 +190,7 @@ public class ArticleDetailFragment extends Fragment implements
                     });
         } else {
             mRootView.setVisibility(View.GONE);
-            toolbar.setTitle("N/A");
+            collapsingToolbar.setTitle("N/A");
             bylineView.setText("N/A" );
             bodyView.setText("N/A");
         }
