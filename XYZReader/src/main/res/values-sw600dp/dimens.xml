@@ -10,4 +10,6 @@
     <dimen name="text_subTitle_size">18sp</dimen>
 
     <dimen name="toolbar_size">70dp</dimen>
+
+    <dimen name="appBarElevaion">4dp</dimen>
 </resources>

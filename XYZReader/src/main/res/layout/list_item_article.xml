@@ -9,14 +9,14 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
-    app:cardBackgroundColor="@color/theme_primary_light"
+    app:cardBackgroundColor="@color/colorPrimaryLight"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/theme_primary_light"
+        android:background="@color/colorPrimaryLight"
         >
 
         <!--suppress AndroidLintContentDescription -->
@@ -25,7 +25,7 @@
             android:scaleType="centerCrop"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:backgroundTint="@color/theme_primary"
+            android:backgroundTint="@color/colorPrimary"
             android:background="@color/photo_placeholder" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
             android:textColor="@color/theme_text_color_secondary"
-            android:background="@color/theme_primary_light"
+            android:background="@color/colorPrimaryLight"
             />
     </LinearLayout>
 

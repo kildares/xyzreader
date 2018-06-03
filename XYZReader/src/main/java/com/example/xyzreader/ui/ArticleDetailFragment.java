@@ -153,7 +153,7 @@ public class ArticleDetailFragment extends Fragment implements
             collapsingToolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
             Date publishedDate = parsePublishedDate();
 
-            String byTag = " by <font color='#" + getActivity().getString(R.color.theme_primary_dark).substring(3) +"'>";
+            String byTag = " by <font color='#" + getActivity().getString(R.color.colorPrimaryDark).substring(3) +"'>";
 
             if (!publishedDate.before(START_OF_EPOCH.getTime())) {
                 bylineView.setText(Html.fromHtml(
